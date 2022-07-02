@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon index.js",
-    "prestart": "babel ./src --out-dir build",
-    "start": "node ./build/bin/www",
-    "startdev": "nodemon --exec babel-node ./src/bin/www"
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "watch": "nodemon index.js",
+  "lint": "./node_modules/.bin/eslint ./src",
+  "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
+  "postpretty": "yarn lint --fix",
+  "prestart": "babel ./src --out-dir build",
+  "start": "node ./build/bin/www",
+  "startdev": "nodemon --exec babel-node ./src/bin/www"
   },
   "keywords": [],
   "author": "",
