@@ -4,4 +4,4 @@ function getAllPlanets(req, res) {
   res.status(200).json(planets);
 }
 
-export default { getAllPlanets };
+export { getAllPlanets };
