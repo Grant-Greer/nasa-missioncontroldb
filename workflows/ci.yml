@@ -1,8 +1,14 @@
 name: nasa-workflow
-on: [push]
+on: 
+  push:
+    branches: [ main ]
+   
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    defaults:
+       run:
+         working-directory: ./server/
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
