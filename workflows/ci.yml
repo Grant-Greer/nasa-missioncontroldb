@@ -1,4 +1,4 @@
-name: nasa-workflow
+name: NASA Project CI
 on: 
   push:
     branches: [ main ]
