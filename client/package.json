@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts vitest --globals",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,5 +35,8 @@
   },
   "overrides": {
     "nth-check@1.0.2": "2.0.1"
+  },
+  "devDependencies": {
+    "vitest": "^0.18.0"
   }
 }
